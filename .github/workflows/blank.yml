@@ -34,6 +34,6 @@ jobs:
         id: install-hyscale
         with:
           hyscale-version: 0.9.8.1.195
-      - run: java -Xms216m -Xmx512m -Djdk.tls.client.protocols=TLSv1.2 -Duser.home=/hyscale -jar /tmp/hyscale.jar --help
+      - run: java -Xms216m -Xmx512m -Djdk.tls.client.protocols=TLSv1.2 -Duser.home=/tmp -jar /tmp/hyscale.jar --help
         shell: bash
         
