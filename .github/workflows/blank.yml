@@ -30,8 +30,10 @@ jobs:
          java-package: jdk
          architecture: x64
 
-      - uses:  vijaySamanuri/hyscale-action@v2
+      - uses:  vijaySamanuri/hyscale-action@v3
         id: install-hyscale
         with:
           hyscale-version: 0.9.8.1.195
+      - run: java -Xms216m -Xmx512m -Djdk.tls.client.protocols=TLSv1.2 -Duser.home=/hyscale -jar /usr/local/bin/hyscale.jar --help
+        shell: bash
         
